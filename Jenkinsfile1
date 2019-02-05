@@ -1,21 +1,27 @@
 pipeline {
   agent any
+  tools {
+       maven 'maven'
+        jdk 'java1.8.0'
+       gradle 'gradle'
+    }
   stages {
-    stage 'Build') {
+    stage('Build') {
+        steps {
        echo 'Running build automation'
        sh './gradlew build --no-daemon'
        archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
    }
    stage('Build Docker Image') {
-	when {
+        when {
             branch 'master'
         }
         steps {
             script {
-                app = docker.build("<docker_loginid>/node-app")
+                app = docker.build("mogunu/node-app")
                 app.inside {
-                    sh 'echo $(crul localhost:8080)'
+                    sh 'echo $(crul localhost:8081)'
              }
           }
           }
@@ -27,9 +33,10 @@ pipeline {
       steps {
          script {
             docker.withRegistry('https://registry.hub.docker.com','docker_hub_login') {
-                  app.push(#${env.BUILD.NUMBER}")
-                  app.push("latest")
+                app.push("${env.BUILD.NUMBER}")
+                app.push("latest")
               }
              }
             }
-       }
+    }   }
+  }

@@ -1,0 +1,55 @@
+
+Git
+	Git client installation
+	New Repo creation in Github.com
+	Setup Global configuration in Git cli
+	Repo initiation using Git cli
+	Project clone from Github.com
+	Git commit, Git status, Git push in Git cli
+	Branch creation & checkout in Git cli
+Maven
+	Maven Installation
+	Build the project using Maven
+	Run the application
+	Clean and package the project
+	Run the .jar file
+Jenkins
+	Install and Configure Jenkins
+	Configure tools in Jenkins
+	Creating jobs in Jenkins
+	Configure pipeline project in jenkins using SCM (Github)
+	Configure Webhook in Github for automatic push
+	Integrate of SonarQube, Artifactory & other tools in pipeline
+SonarQube
+	Install and configure Sonarcube	
+	Integrate Sonarcube in Jenkins
+Jfrog Artifactory
+    Install and configure Artifactory
+	Maven project in Artifactory
+	Integrate in Artifactory in Jenkins pipeline
+Docker
+	Install and configure Docker
+	Building Docker image
+	Dockerized Jenkins, Sonarcube, Artifactory
+    Update the Docker image
+	Upload the docker image in hub.docker.com
+	Docker EXPOSE ports
+	Create Dockerfile and integration in Jenkins pipeline
+Minikube
+	Install and setup minikube
+	Create namespace
+	Create Template and deploy the pods
+	Bounce the Pods and create configmaps
+
+Security Tools on Devops - Team Project
+    Create the simple java in Github
+	Create pipeline to auto pull from SCM
+	Integrated the following tools in Jenkins Pipeline
+		a. Gitsecret
+		b. JUnit
+		c. SonarQube
+		d. OWASP & Zap Proxy
+		e. Docker Bench
+	Build the project using jenkins pipeline with all tools. Finally the Docker image will be uploaded to Docker hub
+	Deploy the pod in Kubernetes Cluster and browse the app url and show the running application
+
